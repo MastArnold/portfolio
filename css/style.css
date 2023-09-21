@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    transition: scroll-margin 0.2s ease-out;
+}
+
+body{
+    margin : 0;
+    padding : 0;
+    background: #202734;
+}
+
+.ma-nav{
+    position: fixed;
+    left : 0;
+    top : 0;
+    right : 0;
+    margin : 0;
+    z-index: 2001;
+    transition: all 0.4s ease-in-out;
+}
+
+.ma-nav.sticky{
+    background: #202734;
+}
+
+.ma-nav .ma-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding : 1.2rem 0.75rem;
+}
+
+.ma-nav .ma-nav-container .ma-bav-brand{
+
+}
+
+.ma-nav .ma-nav-container .ma-nav-group-item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap : 0.45rem;
+}
+
+.ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item{
+    position: relative;
+    background: transparent;
+    color : #fff;
+    border : 1px solid transparent;
+    padding : 0.45rem;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Ubuntu Mono';
+    /*font-family: 'OCR A';*/
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item:hover{
+    
+}
+
+.ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item::before{
+    content: "";
+    position: absolute;
+    left : 0;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    background: #2d4a7f;
+    transform-origin: left;
+    transform: scaleX(0); 
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item:hover::before{
+    transform: scaleX(1);
+    border-radius: 8px;
+}
+
+.my-h4{
+    font-family: 'Ubuntu Mono';
+    font-weight: 500;
+}
+.my-h4.light{
+    color : #fff;
+}
+
+.my-label{
+    display: block;
+    font-size: 14px;
+    font-family: 'Ubuntu Mono';
+    font-weight: 600;
+}
+
+.head{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background: #202734;
+}
+
+.head .photo-head{
+    height: 100%;
+}
+
+.head .photo-head .fluid-img{
+    height: 100%;
+    width: auto;
+}
+
+.head .head-contain{
+    width: 60%;
+    padding : 1.5rem;
+}
+
+.head .head-contain .head-title{
+    color : #fff;
+    font-weight: bold;
+    font-family: 'OCR A';
+    font-size: 46px;
+}
+
+.head .head-contain .head-sub-title{
+    color : #fff;
+    font-weight: 500;
+    font-family: 'OCR A';
+    font-size: 22px;
+}
+
+.head .head-contain .head-description{
+    color : #fff;
+    font-family: 'OCR A';
+    font-weight: 400;
+    font-size: 14px;
+    padding : 1.5rem 3.5rem 0 0;
+}
+
+.profile{
+    width: 100%;
+    background: transparent;
+    margin : 0 0 0.75rem 0;
+}
+.profile-contain{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-contain .profile-group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+.profile-contain .profile-start .profile-group{
+    flex-direction: row-reverse;
+}
+
+.profile .profile-contain .profile-start, .profile .profile-contain .profile-end{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap : 1.2rem;
+    background: #fff;
+    width: calc(50% - 5px);
+    height: 100%;
+    padding : 1.45rem 1.2rem;
+    font-family: 'Ubuntu Mono';
+}
+.profile .profile-contain .profile-start{
+    align-items: flex-end;
+}
+.profile .profile-contain .profile-end{
+    align-items: flex-start;
+}
+
+.profile-contain .mil{
+    width: 25px;
+    height: auto;
+}
+
+.profile .profile-reseaux{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap : 12px;
+    background: #fff;
+    padding : 0.8rem;
+}
+.profile .profile-reseaux .reseau{
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border : 1px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.reseau.facebook{
+    background: transparent;
+}
+.reseau.instagram{
+    background: transparent;
+}
+.reseau.linkedin{
+    background: #006699;
+}
+.reseau.tiktok{
+    background: #222222;
+}
+.reseau.twitter{
+    background: transparent;
+}
+
+.reseau .mil{
+    width: 40px;
+    height: auto;
+}
+
+.formation{
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    padding : 1.5rem 2.1rem;
+}
+
+.formation .formation-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap : 0.55rem;
+    flex-wrap: wrap;
+}
+
+.formation .formation-container .formation-item{
+    cursor: pointer;
+    max-width: 300px;
+    background: #fff;
+    border : 1px solid transparent;
+    border-radius: 0.6rem;
+    padding : 0.75rem 1.1rem;
+    margin : 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.formation .formation-container .formation-item.hide{
+    scale: 40;
+}
+
+.formation .formation-container .formation-item.hide *{
+    opacity: 0;
+}
+
+.formation .formation-container .formation-item:hover{
+    box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
+    -webkit-box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
+    -moz-box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
+}
+
+.formation .formation-container .formation-item .formation-item-img{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.formation .formation-container .formation-item .formation-item-title{
+    font-family: 'Ubuntu Mono';
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    padding : 0.5rem;
+}
+
+.mil-diploma{
+    width: 50px;
+    height: auto;
+}
+
+.formation .formation-view{
+    position: absolute;
+    left : 0;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    background: #fff;
+    padding : 1.2rem 6.5rem;
+    z-index: 1999;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.formation .formation-view.view{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.formation .formation-view .btn-transparent{
+    cursor: pointer;
+    background: transparent;
+    border : 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    outline: 0;
+}
+
+.formation .formation-view .btn-transparent .mil-back{
+    width: 40px;
+    height: auto;
+}
+
+.formation .formation-view-container{
+    padding : 1.2rem 0;
+}
+
+.formation .formation-view-container .formation-group{
+    margin-bottom: 2.75rem;
+}
+
+.formation .formation-view-container .formation-group span{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'OCR A';
+}
+
+.formation .formation-view-container .formation-flex-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap : 12px;
+}

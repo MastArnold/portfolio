@@ -1,0 +1,64 @@
+.mil{
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mil-gmail{
+    content: url("../assets/svg/gmail.svg");
+}
+
+.mil-facebook{
+    content: url("../assets/svg/facebook.svg");
+}
+
+.mil-instagram{
+    content: url("../assets/svg/instagram.svg");
+}
+
+.mil-tiktok{
+    content: url("../assets/svg/tiktok.svg");
+}
+
+.mil-twitter{
+    content: url("../assets/svg/twitter.svg");
+}
+
+.mil-linkedin{
+    content: url("../assets/svg/linkedin.svg");
+}
+
+.mil-github{
+    content: url("../assets/svg/github.svg");
+}
+
+.mil-map-pin{
+    content: url("../assets/svg/map-pin.svg");
+}
+
+.mil-phone{
+    content: url("../assets/svg/phone.svg");
+}
+
+.mil-user-pin{
+    content: url("../assets/svg/user-pin.svg");
+}
+
+.mil-birthday{
+    content: url("../assets/svg/birthday.svg");
+}
+
+.mil-diploma{
+    content: url("../assets/svg/diploma.svg");
+}
+
+.mil-back{
+    content: url("../assets/svg/back.svg");
+}
