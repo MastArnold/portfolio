@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /*black : 151515*/
 }
 
 html{
@@ -93,9 +94,10 @@ body{
 
 .my-label{
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Ubuntu Mono';
-    font-weight: 600;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 .head{
@@ -337,4 +339,74 @@ body{
     justify-content: space-between;
     align-items: center;
     gap : 12px;
+}
+
+.experiencePro{
+    background: #fff;
+    padding : 1.2rem 2.5rem;
+}
+
+.experiencePro .experience-contain{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap : 0.45rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.experiencePro .experience-contain .experience-item{
+    cursor: pointer;
+    background: #151515;
+    color : #fff;
+    border : 1px solid transparent;
+    border-radius: 0.4rem;
+    padding : 0.65rem;
+    margin : 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.experiencePro .experience-contain .experience-item:hover{
+    transform: scale(1.02);
+}
+
+.experiencePro .experience-contain .experience-item .experience-head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap : 8px
+}
+
+.experiencePro .experience-contain .experience-item .experience-head .experience-img{
+    
+}
+
+.experiencePro .experience-contain .experience-item .experience-head .experience-img i{
+    width: 40px;
+    height: auto;
+}
+
+.experiencePro .experience-contain .experience-item .experience-head .experience-title{
+    font-family: 'OCR A';
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.experiencePro .experience-contain .experience-item .experience-body{
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.experiencePro .experience-contain .experience-item.expanded .experience-body{
+    display: block;
+}
+
+.experiencePro .experience-contain .experience-item.expanded .experience-body .experience-group{
+    margin-bottom: 1.5rem;
+}
+
+.experiencePro .experience-contain .experience-item.expanded .experience-body .experience-group span{
+    font-family: 'OCR A';
+    font-weight: 500;
+    font-size: 14px;
 }

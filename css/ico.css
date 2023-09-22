@@ -62,3 +62,7 @@
 .mil-back{
     content: url("../assets/svg/back.svg");
 }
+
+.mil-experience-pro{
+    content : url("../assets/svg/experience-pro.svg");
+}
