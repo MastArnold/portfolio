@@ -11,6 +11,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.mil-avatar{
+    content: url("../assets/svg/AvatarMaker.svg");
+}
+
 .mil-gmail{
     content: url("../assets/svg/gmail.svg");
 }
@@ -65,4 +69,104 @@
 
 .mil-experience-pro{
     content : url("../assets/svg/experience-pro.svg");
+}
+
+.mil-medicine{
+    content: url("../assets/svg/medicine.svg");
+}
+
+.mil-laboratory{
+    content: url("../assets/svg/laboratory.svg");
+}
+
+.mil-html-5{
+    content: url("../assets/svg/competence/html-5.svg");
+}
+
+.mil-css-3{
+    content: url("../assets/svg/competence/css3.svg");
+}
+
+.mil-bootstrap{
+    content: url("../assets/svg/competence/bootstrap.svg");
+}
+
+.mil-js{
+    content: url("../assets/svg/competence/javascript.svg");
+}
+
+.mil-jquery{
+    content:url('../assets/svg/competence/jquery.svg');
+}
+
+.mil-node-js{
+    content: url("../assets/svg/competence/node.svg") ;
+}
+
+.mil-angular{
+    content: url("../assets/svg/competence/angular.svg");  
+}
+
+.mil-php{
+    content : url("../assets/svg/competence/php.svg");
+}
+
+.mil-laravel{
+    content: url("../assets/svg/competence/laravel.svg");
+}
+
+.mil-mysql{
+    content: url("../assets/svg/competence/mysql.svg");
+}
+
+.mil-mongodb{
+    content: url("../assets/svg/competence/mongo.svg");
+}
+
+.mil-django{
+    content:  url("../assets/svg/competence/django.svg");
+}
+
+.mil-ts{
+    content: url("../assets/svg/competence/typescript.svg");
+}
+
+.mil-c{
+    content: url("../assets/svg/competence/c.svg");
+}
+
+.mil-c-sharp{
+    content: url("../assets/svg/competence/c-sharp.svg");
+}
+
+.mil-java{
+    content: url("../assets/svg/competence/java.svg");
+}
+
+.mil-python{
+    content: url("../assets/svg/competence/python.svg");
+}
+
+.mil-c-plus-plus{
+    content: url("../assets/svg/competence/c-plus-plus.svg");
+}
+
+.mil-kotlin{
+    content: url("../assets/svg/competence/kotlin.svg");
+}
+
+.mil-flutter{
+    content: url("../assets/svg/competence/flutter.svg");
+}
+
+.mil-ionic{
+    content: url("../assets/svg/competence/ionic.svg");
+}
+
+.mil-classly{
+    content: url("../assets/svg/realisation/classly.svg");
+}
+
+.mil-pharmaline{
+    content: url("../assets/svg/realisation/pharmaline.svg");
 }

@@ -1,3 +1,7 @@
+:root{
+    --my-dark : rgb(28, 42, 67);
+}
+
 *{
     box-sizing: border-box;
     /*black : 151515*/
@@ -9,9 +13,24 @@ html{
 }
 
 body{
+    overflow-x: hidden;
     margin : 0;
-    padding : 0;
-    background: #202734;
+    padding : 0 1.5rem;
+    background: #fff;
+}
+
+.doc-loader{
+    position : fixed;
+    left : 0;
+    top : 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 2010;
+}
+
+.my-content{
+    display: none;
 }
 
 .ma-nav{
@@ -25,7 +44,7 @@ body{
 }
 
 .ma-nav.sticky{
-    background: #202734;
+    background: var(--my-dark);
 }
 
 .ma-nav .ma-nav-container{
@@ -50,10 +69,10 @@ body{
 .ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item{
     position: relative;
     background: transparent;
-    color : #fff;
+    color : var(--my-dark);
     border : 1px solid transparent;
     padding : 0.45rem;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     font-family: 'Ubuntu Mono';
     /*font-family: 'OCR A';*/
@@ -61,8 +80,12 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
+.ma-nav.sticky .ma-nav-container .ma-nav-group-item .ma-nav-item{
+    color : #fff;
+}
+
 .ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item:hover{
-    
+    color : #fff;
 }
 
 .ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item::before{
@@ -81,7 +104,6 @@ body{
 
 .ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item:hover::before{
     transform: scaleX(1);
-    border-radius: 8px;
 }
 
 .my-h4{
@@ -101,43 +123,105 @@ body{
 }
 
 .head{
+    overflow: hidden;
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    background: #202734;
+    background: transparent;
 }
 
-.head .photo-head{
-    height: 100%;
+.head::before{
+    content: url('../assets/svg/blob/blob.svg');
+    position: absolute;
+    left : 0;
+    top : 0;
+    right: 0;
+    bottom : 0;
+    z-index: -1;
 }
 
-.head .photo-head .fluid-img{
-    height: 100%;
-    width: auto;
+.head .card-head{
+    display: grid;
+    place-items: center;
+    width: 40%;
+    height: auto;
+    padding : 0 1rem;
+}
+
+.head .card-head .card{
+    overflow: hidden;
+    width: 30%;
+    height: auto;
+    padding : 0;
+    margin : 0;
+    border : 5px solid var(--my-dark);
+    border-radius: 50%;
+}
+
+.head .card-head .card img{
+    width: 100%;
+    height: auto;
 }
 
 .head .head-contain{
+    position: relative;
     width: 60%;
     padding : 1.5rem;
+    border: 5px solid var(--my-dark);
+}
+
+.head .head-contain::before{
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -40%;
+    z-index: -1;
+    width: 40%;
+    height:5px;
+    background: var(--my-dark);
+}
+
+.head .head-contain::after{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom : -5px;
+    width: 50px;
+    background: transparent;
+    border : 5px solid #fff;
+    border-left-color: transparent;
 }
 
 .head .head-contain .head-title{
-    color : #fff;
+    display: flex;
+    gap : 12px;
+    color : var(--my-dark);
     font-weight: bold;
     font-family: 'OCR A';
     font-size: 46px;
 }
 
+.head .head-contain .head-title span{
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.head .head-contain .head-title span:hover {
+    transform: rotateY(360deg);
+}
+
 .head .head-contain .head-sub-title{
-    color : #fff;
+    color : var(--my-dark);
     font-weight: 500;
     font-family: 'OCR A';
     font-size: 22px;
 }
 
 .head .head-contain .head-description{
-    color : #fff;
+    color : var(--my-dark);
     font-family: 'OCR A';
     font-weight: 400;
     font-size: 14px;
@@ -146,7 +230,7 @@ body{
 
 .profile{
     width: 100%;
-    background: transparent;
+    background: #fff;
     margin : 0 0 0.75rem 0;
 }
 .profile-contain{
@@ -165,22 +249,36 @@ body{
     flex-direction: row-reverse;
 }
 
+.profile-contain .profile-end .profile-group a{
+    color : #fff;
+}
+
 .profile .profile-contain .profile-start, .profile .profile-contain .profile-end{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     gap : 1.2rem;
-    background: #fff;
+    background: var(--my-dark);
+    color : #fff;
     width: calc(50% - 5px);
     height: 100%;
     padding : 1.45rem 1.2rem;
     font-family: 'Ubuntu Mono';
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
 }
 .profile .profile-contain .profile-start{
     align-items: flex-end;
+    transform: translateX(-50%);
 }
 .profile .profile-contain .profile-end{
     align-items: flex-start;
+    transform: translateX(50%);
+}
+
+.profile.show .profile-contain .profile-start, .profile.show .profile-contain .profile-end{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .profile-contain .mil{
@@ -194,8 +292,15 @@ body{
     justify-content: space-evenly;
     align-items: center;
     gap : 12px;
-    background: #fff;
+    background: var(--my-dark);
     padding : 0.8rem;
+    opacity: 0.5;
+    transform: translateY(100%);
+    transition: all 0.6s ease-in-out;
+}
+.profile.show .profile-reseaux{
+    opacity: 1;
+    transform: translateY(0);
 }
 .profile .profile-reseaux .reseau{
     display: grid;
@@ -231,7 +336,7 @@ body{
 .formation{
     overflow: hidden;
     position: relative;
-    background: transparent;
+    background: #fff;
     padding : 1.5rem 2.1rem;
 }
 
@@ -247,7 +352,8 @@ body{
 .formation .formation-container .formation-item{
     cursor: pointer;
     max-width: 300px;
-    background: #fff;
+    background: var(--my-dark);
+    color : #fff;
     border : 1px solid transparent;
     border-radius: 0.6rem;
     padding : 0.75rem 1.1rem;
@@ -264,9 +370,9 @@ body{
 }
 
 .formation .formation-container .formation-item:hover{
-    box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
-    -webkit-box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
-    -moz-box-shadow: 0 0 0px 4px rgba(255,255,255,0.56);
+    box-shadow: 0 0 0px 4px rgba(32, 39, 52,0.56);
+    -webkit-box-shadow: 0 0 0px 4px rgba(32, 39, 52,0.56);
+    -moz-box-shadow: 0 0 0px 4px rgba(32, 39, 52,0.56);
 }
 
 .formation .formation-container .formation-item .formation-item-img{
@@ -342,7 +448,7 @@ body{
 }
 
 .experiencePro{
-    background: #fff;
+    background: var(--my-dark);
     padding : 1.2rem 2.5rem;
 }
 
@@ -357,8 +463,8 @@ body{
 
 .experiencePro .experience-contain .experience-item{
     cursor: pointer;
-    background: #151515;
-    color : #fff;
+    background: #fff;
+    color : var(--my-dark);
     border : 1px solid transparent;
     border-radius: 0.4rem;
     padding : 0.65rem;
@@ -409,4 +515,156 @@ body{
     font-family: 'OCR A';
     font-weight: 500;
     font-size: 14px;
+}
+
+.competence{
+    padding : 1.2rem 1.5rem;
+    background: #fff;
+}
+
+.competence-contain{
+    color : var(--my-dark);
+}
+
+.competence-contain .competence-item{
+    display: flex;
+    justify-content: space-between;
+    align-items:stretch;
+}
+
+.competence-title{
+    width: calc(65% - 12px);
+    padding : 0.8rem 1.2rem;
+}
+.competence-title .title{
+    font-family: 'OCR A';
+    font-weight: 500;
+    font-size: 28px;
+}
+.competence-title .competence-cards{
+    display: flex;
+    justify-content: flex-start;
+    gap : 0.65rem;
+    flex-wrap: wrap;
+    padding : 0.75rem 0;
+}
+.competence-title .competence-cards .competence-cards-item{
+    cursor: pointer;
+    background: var(--my-dark);
+    padding : 0.6rem 1.2rem;
+    border : 1px solid transparent;
+    border-radius: 0.5rem;
+}
+.competence-title .competence-cards .competence-cards-item .competence-cards-item-img{
+    display: grid;
+    place-items: center;
+}
+.competence-title .competence-cards .competence-cards-item .competence-cards-item-img .mil{
+    width: 40px;
+    height: auto;
+}
+
+.competence-title .competence-cards .competence-cards-item .competence-cards-item-title{
+    padding : 0.5rem 0;
+    font-family: 'Ubuntu Mono';
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color : #fff;
+}
+
+.realisation{
+    width: 100%;
+    background: var(--my-dark);
+    color : #fff;
+    padding : 0.7rem 1.2rem;
+}
+
+.realisation .realisation-contain{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap : 0.75rem;
+}
+
+.realisation .realisation-contain .realisation-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding : 2.2rem 2rem;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    opacity: 0;
+    -webkit-transition: all 1s cubic-bezier(0.1, 0.08, 0.22, 0.99);
+    transition: all 1s cubic-bezier(0.1, 0.08, 0.22, 0.99);
+}
+.realisation .realisation-contain .realisation-item:nth-child(even){
+    transform: translateX(50%);
+}
+.realisation .realisation-contain .realisation-item:nth-child(odd){
+    transform: translateX(-50%);
+}
+.realisation .realisation-contain .realisation-item.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.realisation .realisation-contain .realisation-item .realisation-language{
+    padding: 0.5rem 2.5rem;
+}
+
+.realisation .realisation-contain .realisation-item .realisation-language .mil{
+    width: 50px;
+    height: auto;
+}
+
+.realisation .realisation-contain .realisation-item .realisation-detail {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail .realisation-detail-contain{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    flex-direction: column;
+    gap : 8px;
+    padding : 0 0.5rem;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-ico{
+    cursor: pointer;
+    width: 75px;
+    height: auto;
+    padding : 0.6rem;
+    box-shadow: 0 0 2px 1px rgba(28, 42, 67,0.4);
+    transition: all 0.4s ease-in-out;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-ico:hover{
+    box-shadow: 0 0 6px 1px rgba(28, 42, 67,0.4);
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-ico .mil{
+    width: 100%;
+    height: auto;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-ico img{
+    width: 100%;
+    height: auto;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-title {
+    color : var(--my-dark);
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Ubuntu Mono';
+    text-align: center;
+}
+.realisation .realisation-contain .realisation-item .realisation-detail  .realisation-sub-title {
+    color : var(--my-dark);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Ubuntu Mono';
+    text-align: center;
 }

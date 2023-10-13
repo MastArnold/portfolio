@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ico.css">
+    <style>
+        .container{
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+        .card{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        .card-up, .card-bottom{
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            background: #101010;
+            padding : 0.5rem;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .card:hover .card-up{
+            
+        }
+        .card:hover .card-bottom{
+            transform: rotate(50deg) translate(-80px, 80px);
+        }
+
+        .card-up .mil{
+            width: 100%;
+            height: auto;
+            transform: translateY(105px);
+        }
+
+        .card-bottom .mil{
+            width: 100%;
+            height: auto;
+            transform: translateY(-105px);
+        }
+
+        .card-text{
+            position: absolute;
+            left : 0;
+            top : calc(50% + 15px);
+            opacity: 0;
+            font-size: 16px;
+            font-family: 'Ubuntu Mono';
+            font-weight: 500;
+            transform: translateX(0);
+            transition: all 0.4s ease-in-out;
+        }
+
+        .card:hover .card-text{
+            transform: translateX(50%);
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-up">
+                <i class="mil mil-medicine"></i>
+            </div>
+            <div class="card-text">Stagiare Au Centre MURAZ</div>
+            <div class="card-bottom">
+                <i class="mil mil-medicine"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelector(".container").style.height = window.innerHeight + 'px';
+    </script>
+</body>
+</html>
