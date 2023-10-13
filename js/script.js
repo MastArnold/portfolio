@@ -68,3 +68,5 @@ experienceArray.forEach((value)=>{
         }
     });
 });
+
+//alert(window.innerWidth);

@@ -532,6 +532,10 @@ body{
     align-items:stretch;
 }
 
+.competence-stat{
+    width: calc(35% - 12px);height: auto;
+}
+
 .competence-title{
     width: calc(65% - 12px);
     padding : 0.8rem 1.2rem;
