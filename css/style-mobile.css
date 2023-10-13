@@ -179,7 +179,17 @@
     }
 
     .profile .profile-contain .profile-start, .profile .profile-contain .profile-end{
+        width: 100%;
+        align-items: center;
         font-size: 12px;
+    }
+
+    .profile-contain{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
     }
 
     .competence-contain .competence-item{
