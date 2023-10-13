@@ -197,6 +197,7 @@ body{
 
 .head .head-contain .head-title{
     display: flex;
+    flex-wrap: wrap;
     gap : 12px;
     color : var(--my-dark);
     font-weight: bold;
