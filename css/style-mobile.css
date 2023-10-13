@@ -1,7 +1,4 @@
 @media (max-width: 1200px) {
-    body{
-        background: yellow;
-    }
 
     .head .head-contain .head-title{
         font-size: 36px;
@@ -9,9 +6,6 @@
 }
 
 @media (max-width: 1000px) {
-    body{
-        background: pink;
-    }
 
     .head .head-contain .head-title{
         font-size: 26px;
@@ -19,9 +13,6 @@
 }
 
 @media (max-width: 790px) {
-    body{
-        background: violet;
-    }
 
     .head .head-contain .head-title{
         font-size: 22px;
@@ -43,9 +34,6 @@
 }
 
 @media (max-width: 700px) {
-    body{
-        background: blue;
-    }
 
     .ma-nav .ma-nav-container .ma-nav-group-item .ma-nav-item{
         font-size: 12px;
@@ -102,9 +90,6 @@
 }
 
 @media (max-width: 540px) {
-    body{
-        background: brown;
-    }
 
     .head{
         justify-content: center;
@@ -139,5 +124,19 @@
 
     .profile .profile-contain .profile-start, .profile .profile-contain .profile-end{
         font-size: 12px;
+    }
+
+    .competence-contain .competence-item{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .competence-title{
+        width: 100%;
+    }
+
+    .competence-stat{
+        width: 75%;
     }
 }
